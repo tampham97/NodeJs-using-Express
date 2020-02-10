@@ -6,6 +6,7 @@ var port = 3000;
 
 var userRoute = require('./routes/user.route')
 var authRoute = require('./routes/auth.route')
+var productsRoute = require('./routes/products.route')
 app.use(express.static('public'))
 //goi method cua pug
 app.set('view engine', 'pug');
@@ -22,6 +23,7 @@ app.get('/', function(req, res){
 
 app.use('/users',authMiddleware.requireAuth, userRoute)
 app.use('/auth', authRoute)
+app.use('/products', productsRoute)
 
 
 app.listen(port, function(){
