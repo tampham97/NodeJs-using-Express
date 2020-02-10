@@ -1,10 +1,10 @@
-var express = require('express')
+var express = require('express');
 var router = express.Router();
+var validate = require('../validation/user.validate');
+var controller = require('../controllers/user.controller');
+var authMiddleware = require('../middlewares/auth.middleware');
 
-var validate = require('../validation/user.validate')
-
-var controller = require('../controllers/user.controller')
-
+//router.get('/',authMiddleware.requireAuth, controller.index);
 router.get('/', controller.index);
 
 router.get('/search', controller.search);
