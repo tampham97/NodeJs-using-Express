@@ -13,7 +13,7 @@ app.set('views', './views')
 // middleware cua body-parser
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-app.use(cookieParser());
+app.use(cookieParser("asdasdasdasd"));
 
 var authMiddleware = require('./middlewares/auth.middleware');
 app.get('/', function(req, res){
