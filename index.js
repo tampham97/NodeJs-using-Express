@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 var port = 3000;
 
 var userRoute = require('./routes/user.route')
-
+app.use(express.static('public'))
 
 //goi method cua pug
 app.set('view engine', 'pug');
